@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<style type="text/css">
+
+		.boxs {
+			height: 100px;
+			width: 100px;
+			background-image: url(kust.png);
+			background-size: 100%;
+			border: solid;
+			position: absolute;
+			color: white;
+		}
+		.firsBox {
+			background-color: white;
+			background-image: url(shelly.png);
+			background-size: 120%;
+		}
+		.win{
+			display: none;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		.front{
+			background-image: url(tramp_front.png); 
+			background-size: 100%;
+		}
+		.back{
+			background-image: url(tramp_back.png); 
+			background-size: 100%;
+		}
+		.bot{
+			background-image: url(tramp_bottom.png); 
+			background-size: 100%;
+		}
+		.p1{
+			color: red;
+			font-weight: bold;
+		}
+		.p2{
+			color: lime;
+			font-weight: bold;
+		}
+		.h{
+			display: none;
+			color: white;
+			text-align: center;
+		}
+	</style>
+</head>
+<body style="background-image: url(bg.jpg); background-repeat: no-repeat; background-size: 100%;">
+	<img src="winscreen.jpg" class="win">
+	<h1 class="h">Набранные очки: <span class="ochko">0</span></h1>
+	<div class="content">
+		<h4 style="margin-left: 20px">Очки: <span class="score">150</span></h4>
+		<img src="dice.png" class="bt" style="width: 100px; margin-left: 20px">		
+		<div class="boxs firsBox" style="margin-left: 20px">
+			<h4>finish</h4>
+		</div>
+		<div class="boxs" style="margin-left: 130px">1</div>
+		<div class="boxs" style="margin-left: 240px">2</div>
+		<div class="boxs back" style="margin-left: 350px;">3
+			<p class="p1">Иди на 1 клетку назад</p>
+		</div>
+				
+		<div class="boxs" style="margin-left: 460px">4</div> 
+		<div class="boxs" style="margin-left: 570px">5</div>
+		<div class="boxs front" style="margin-left: 680px;">6
+			<p class="p2">Иди на 4 клетки вперёд</p>
+		</div>
+		<div class="boxs" style="margin-left: 790px">7</div>
+
+		<div class="boxs" style="margin-left: 900px">8</div>
+		<div class="boxs back" style="margin-left: 1010px;">9
+			<p class="p1">Иди на 2 клетки назад</p>
+		</div>
+		<div class="boxs" style="margin-left: 1120px">10</div>
+		<div class="boxs" style="margin-left: 1230px">11</div>
+
+		<div class="boxs back" style="margin-left: 1340px;">12 
+			<p class="p1">Иди на 5 клеток назад</p>
+		</div>
+		<div class="boxs" style="margin-left: 1340px; margin-top: 110px">13</div>
+		<div class="boxs bot" style="margin-left: 1340px; margin-top: 220px;">14
+			<p class="p2">Иди на 3 клетки вперёд</p>
+		</div>	
+		<div class="boxs" style="margin-left: 1340px; margin-top: 330px">15</div>		
+
+		<div class="boxs" style="margin-left: 1340px; margin-top: 440px">16</div>
+		<div class="boxs" style="margin-left: 1230px; margin-top: 440px">17</div>
+		<div class="boxs back" style="margin-left: 1120px; margin-top: 440px;">18
+			<p class="p2">Иди на 1 клетку вперёд</p>
+		</div>
+		<div class="boxs" style="margin-left: 1010px; margin-top: 440px">19</div>
+
+		<div class="boxs" style="margin-left: 900px; margin-top: 440px">20</div>
+		<div class="boxs" style="margin-left: 790px; margin-top: 440px">21</div>
+		<div class="boxs" style="margin-left: 680px; margin-top: 440px">22</div>
+		<div class="boxs front" style="margin-left: 570px; margin-top: 440px">23
+			<p class="p1">Проходи всё заново</p>
+		</div>
+
+		<div class="boxs back" style="margin-left: 460px; margin-top: 440px">24
+			<p class="p2">Иди на 1 клетку вперёд</p>
+		</div>
+		<div class="boxs" style="margin-left: 350px; margin-top: 440px">25</div>
+		<div class="boxs" style="margin-left: 240px; margin-top: 440px">26</div>
+		<div class="boxs" style="margin-left: 130px; margin-top: 440px">27</div>
+
+		<div class="boxs" style="margin-left: 20px; margin-top: 440px">28</div>
+		<div class="boxs" style="margin-left: 20px; margin-top: 330px">29</div>
+		<div class="boxs bot" style="margin-left: 20px; margin-top: 220px">30
+			<p class="p1">Иди на 2 клетки назад</p>
+		</div>	
+		<div class="boxs" style="margin-left: 20px; margin-top: 110px">31</div>		
+
+		<!--последние дивы-->
+		<div class="boxs" style="margin-left: 130px; margin-top: 110px; background-color: green; opacity: 0"></div>
+		<div class="boxs" style="margin-left: 240px; margin-top: 110px; background-color: green; opacity: 0"></div>
+		<div class="boxs" style="margin-left: 350px; margin-top: 110px; background-color: green; opacity: 0"></div>
+		<div class="boxs" style="margin-left: 460px; margin-top: 110px; background-color: green; opacity: 0"></div>
+		<div class="boxs" style="margin-left: 570px; margin-top: 110px; background-color: green; opacity: 0"></div>
+		<div class="boxs" style="margin-left: 680px; margin-top: 110px; background-color: green; opacity: 0"></div>
+
+	</div>	
+	<script type="text/javascript">
+		let div = document.querySelectorAll(".boxs")
+		let cube = document.querySelector(".bt")
+		let score = 150
+		let ochko = document.querySelector(".ochko")
+		let span = document.querySelector(".score")
+		let scr = 0
+		cube.onclick = function(){
+			let rand = Math.random()
+			let big = rand * 6
+			let walk = Math.round(big)
+			if(walk >= 1){
+				scr = scr + walk
+				scrPast = scr - walk
+				div[scr].style.backgroundImage = "url(shelly.png)"
+				div[scr].style.backgroundSize = "120%"
+				div[scrPast].style.backgroundImage = "url(kust.png)"
+				div[scrPast].style.backgroundSize = "100%"
+				score = score + 10
+				span.innerHTML = score
+				ochko.innerHTML = score
+			}
+			if(scr == 12){
+				alert("Упс, иди на 5 клеток назад")
+				scr = scr - 5
+				div[scr].style.backgroundImage = "url(shelly.png)"
+				div[scr].style.backgroundSize = "120%"
+				div[12].style.backgroundImage = "url(tramp_back.png)"
+				div[12].style.backgroundSize = "100%"
+				score = score - 30
+				span.innerHTML = score
+			}
+			if(scr == 3){
+				alert("Упс, иди на 1 клетку назад")
+				scr = scr - 1
+				div[scr].style.backgroundImage = "url(shelly.png)"
+				div[scr].style.backgroundSize = "120%"
+				div[3].style.backgroundImage = "url(tramp_back.png)"
+				div[3].style.backgroundSize = "100%"
+				score = score - 30
+				span.innerHTML = score
+			}
+			if(scr == 6){
+				alert("Ура, ты идешь на 4 клетки вперёд")
+				scr = scr + 4
+				div[scr].style.backgroundImage = "url(shelly.png)"
+				div[scr].style.backgroundSize = "120%"
+				div[6].style.backgroundImage = "url(tramp_front.png)"
+				div[6].style.backgroundSize = "100%"
+				score = score + 20
+				span.innerHTML = score
+			}
+			if(scr == 9){
+				alert("Упс, иди на 2 клетки назад")
+				scr = scr - 2
+				div[scr].style.backgroundImage = "url(shelly.png)"
+				div[scr].style.backgroundSize = "120%"
+				div[9].style.backgroundImage = "url(tramp_back.png)"
+				div[9].style.backgroundSize = "100%"
+				score = score - 30
+				span.innerHTML = score
+			}
+			if(scr == 14){
+				alert("Ура, ты идешь на 3 клетки вперёд")
+				scr = scr + 3
+				div[scr].style.backgroundImage = "url(shelly.png)"
+				div[scr].style.backgroundSize = "120%"
+				div[14].style.backgroundImage = "url(tramp_bottom.png)"
+				div[14].style.backgroundSize = "100%"
+				score = score + 20
+				span.innerHTML = score
+			}
+			if(scr == 18){
+				alert("Ура, ты идешь на 1 клетку вперёд")
+				scr = scr + 1
+				div[scr].style.backgroundImage = "url(shelly.png)"
+				div[scr].style.backgroundSize = "120%"
+				div[18].style.backgroundImage = "url(tramp_back.png)"
+				div[18].style.backgroundSize = "100%"
+				score = score + 20
+				span.innerHTML = score
+			}
+			if(scr == 23){
+				alert("Ой, какая неудача, начинай играть заново :(")
+				scr = scr - 23
+				div[scr].style.backgroundImage = "url(shelly.png)"
+				div[scr].style.backgroundSize = "120%"
+				div[23].style.backgroundImage = "url(tramp_back.png)"
+				div[23].style.backgroundSize = "100%"
+				score = 150
+				span.innerHTML = score
+			}
+			if(scr == 24){
+				alert("Ура, ты идешь на 1 клетку вперёд")
+				scr = scr + 1
+				div[scr].style.backgroundImage = "url(shelly.png)"
+				div[scr].style.backgroundSize = "120%"
+				div[24].style.backgroundImage = "url(tramp_back.png)"
+				div[24].style.backgroundSize = "100%"
+				score = score + 20
+				span.innerHTML = score
+			}
+			if(scr == 30){
+				alert("Упс, иди на 2 клетки назад")
+				scr = scr - 2
+				div[scr].style.backgroundImage = "url(shelly.png)"
+				div[scr].style.backgroundSize = "120%"
+				div[30].style.backgroundImage = "url(tramp_bottom.png)"
+				div[30].style.backgroundSize = "100%"
+				score = score - 30
+				span.innerHTML = score
+			}
+			if(scr >= 31){
+				alert("Ты выйграл, молодец")
+				document.querySelector(".content").style.display = "none"
+				document.querySelector(".win").style.display = "block"
+				document.querySelector(".h").style.display = "block"
+			}
+		}
+	</script>
+</body>
+</html>
